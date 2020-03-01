@@ -13,4 +13,9 @@ $(document).ready(function() {
         // console.log(showPrice);
     })
 
+    $("select#crust").change(function () {
+        var showPriceTwo = $(this).children("option:selected").val();
+        $("#prizeTwo").text(showPriceTwo);
+    })
+
 });
