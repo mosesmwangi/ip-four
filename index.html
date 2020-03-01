@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeOfTastyPizza</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/snake.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Enjoy Yours At Sarah's</h2>
+
+        <img src="pizzaImages/imageOne.jpg" alt="" id="pizzaPic">
+        <div class="showContainer">
+            
+            <h4>Choose Topping</h4>
+            <label for="cars">Choose a Topping: </label>
+
+            <select id="choiceOftopping">
+                <option value="pepperoni">Pepperoni</option>
+                <option value="onion">Onion</option>
+                <option value="mushroom">Mushroom</option>
+                <option value="sausage">Sausage</option>
+            </select>
+
+        </div>
+
+        <h1> Place</h1>
+        <br>
+        <div class="main snake">
+            <div class="overlay">
+                <span class="title">Pizza One</span>
+                <span>OKay, Okay this sh*t though.</span>
+            </div>
+            <img src="pizzaImages/imageTwo.jpg" alt="">
+        </div>
+        <div class="main snake">
+            <div class="overlay">
+                <span class="title">Pizza Two</span>
+                <span>OKay, Okay this sh*t though.</span>
+            </div>
+            <img src="pizzaImages/imageThree.jpg" alt="">
+        </div>
+        <div class="main snake">
+            <div class="overlay">
+                <span class="title">Pizza Three</span>
+                <span>OKay, Okay this sh*t though.</span>
+            </div>
+            <img src="pizzaImages/imageFour.jpg" alt="">
+        </div>
+        <div class="form">
+            <form action="">
+                <label for="">Order Pizza: </label>
+                <input type="text" class="form-control">
+                <label for="">Contacts</label>
+                <input type="text" class="form-control">
+                <button id="btn" class="btn">Send Details</button>
+            </form>
+        </div>
+        <script>
+            $(".snake").snakeify({
+                speed: 200
+            })
+        </script>
+    </div>
+</body>
+
+</html>
