@@ -68,3 +68,7 @@ img#pizzaPic {
     cursor: pointer;
     display: none;
 }
+
+.hideShow {
+    display: none;
+}

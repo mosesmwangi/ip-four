@@ -63,5 +63,11 @@ $(document).ready(function() {
 
     })
 
+    $('#radio').click(function() {
+        if($('#radio').is(':checked')) { 
+            $(".hideShow").show()
+         }
+     });
+
 
 });
