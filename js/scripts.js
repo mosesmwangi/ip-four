@@ -6,4 +6,11 @@ $(document).ready(function() {
         console.log("I have been clicked")
         $(".showContainer").toggle();
     });
+
+    $("select#size").change(function () {
+        var showPrice = $(this).children("option:selected").val();
+        $("#prize").text(showPrice);
+        // console.log(showPrice);
+    })
+
 });
