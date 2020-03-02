@@ -73,5 +73,33 @@ $(document).ready(function() {
         alert("You will get your order on Checkout");
     })
 
+    $("#checkout").click(function() {
+            var showPrice = $("select#size").children("option:selected").val();
+            var showPriceNow = parseInt(showPrice);
+            var showPriceTwo = $("select#crust").children("option:selected").val();
+            var showPriceTwoNow = parseInt(showPriceTwo);
+            var priceOfTopping = [];
+            $.each($("input[name='topping']:checked"), function () {
+                priceOfTopping.push($(this).val());
+            });
+            var numValue = $("input#number").val();
+            var nuumValue = parseInt(numValue);
+            var totalSumOfToppings = 0;
+            // console.log(priceOfTopping);
+
+            for (var index = 0; index < priceOfTopping.length; index++) {
+
+                totalSumOfToppings += parseInt(priceOfTopping[index]);
+                // console.log(totalSumOfToppings);
+            }
+
+            var grandTotal = (((showPriceNow + showPriceTwoNow + totalSumOfToppings) * nuumValue) + 400);
+
+            console.log(grandTotal);
+
+            $("#grandTotal").text(grandTotal);
+            
+            // console.log();
+    })
 
 });
