@@ -73,7 +73,7 @@ $(document).ready(function() {
         alert("You will get your order on Checkout");
     })
 
-    $("#checkout").click(function() {
+    $("button#checkout").click(function() {
             var showPrice = $("select#size").children("option:selected").val();
             var showPriceNow = parseInt(showPrice);
             var showPriceTwo = $("select#crust").children("option:selected").val();
@@ -93,11 +93,19 @@ $(document).ready(function() {
                 // console.log(totalSumOfToppings);
             }
 
-            var grandTotal = (((showPriceNow + showPriceTwoNow + totalSumOfToppings) * nuumValue) + 400);
+            var num = 400;
+            var theNum = parseInt(num);
+            // console.log(theNum);
+
+            var grandTotal = (((showPriceNow + showPriceTwoNow + totalSumOfToppings) * nuumValue) + theNum);
 
             console.log(grandTotal);
 
-            $("#grandTotal").text(grandTotal);
+            
+
+            $("#grandTotal").text("The Totals for your pizza(s) is Ksh. " + grandTotal);
+
+            
             
             // console.log();
     })
