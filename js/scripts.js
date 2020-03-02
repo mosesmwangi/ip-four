@@ -1,8 +1,8 @@
-$(document).ready(function() {
-    $("form.btn").submit(function(event) {
-        event.preventDefault();        
+$(document).ready(function () {
+    $("form.btn").submit(function (event) {
+        event.preventDefault();
     });
-    $("img#pizzaPic").click(function(){
+    $("img#pizzaPic").click(function () {
         console.log("I have been clicked")
         $(".showContainer").toggle();
     });
@@ -23,63 +23,55 @@ $(document).ready(function() {
         $.each($("input[name='topping']:checked"), function () {
             priceOfTopping.push($(this).val());
         });
-        // var allPriceOfTopping = priceOfTopping.join(",");
-        // console.log(allPriceOfTopping);
+
         var totalSumOfToppings = 0;
-        // $("#prizeThree").text(priceOfTopping.join(","));
-        // console.log(priceOfTopping);
-
         for (var index = 0; index < priceOfTopping.length; index++) {
-
-            // totalSumOfToppings = 0;
-
             totalSumOfToppings += parseInt(priceOfTopping[index]);
             $("#prizeOfTopping").text(totalSumOfToppings);
         }
 
     })
 
-    $('#radio').click(function() {
-        if($('#radio').is(':checked')) { 
+    $('#radio').click(function () {
+        if ($('#radio').is(':checked')) {
             $(".hideShow").show()
-         }
-     });
+        }
+    });
 
-    $("button#btn").click(function() {
+    $("button#btn").click(function () {
         alert("You will get your order on Checkout");
     })
 
-    $("button#checkout").click(function() {
-            var showPrice = $("select#size").children("option:selected").val();
-            var showPriceNow = parseInt(showPrice);
-            var showPriceTwo = $("select#crust").children("option:selected").val();
-            var showPriceTwoNow = parseInt(showPriceTwo);
-            var priceOfTopping = [];
-            $.each($("input[name='topping']:checked"), function () {
-                priceOfTopping.push($(this).val());
-            });
-            var numValue = $("input#number").val();
-            var nuumValue = parseInt(numValue);
-            var totalSumOfToppings = 0;
-            // console.log(priceOfTopping);
+    $("button#checkout").click(function () {
+        var showPrice = $("select#size").children("option:selected").val();
+        var showPriceNow = parseInt(showPrice);
+        var showPriceTwo = $("select#crust").children("option:selected").val();
+        var showPriceTwoNow = parseInt(showPriceTwo);
+        var priceOfTopping = [];
+        $.each($("input[name='topping']:checked"), function () {
+            priceOfTopping.push($(this).val());
+        });
+        var numValue = $("input#number").val();
+        var nuumValue = parseInt(numValue);
+        var totalSumOfToppings = 0;
+        // console.log(priceOfTopping);
 
-            for (var index = 0; index < priceOfTopping.length; index++) {
+        for (var index = 0; index < priceOfTopping.length; index++) {
 
-                totalSumOfToppings += parseInt(priceOfTopping[index]);
-                // console.log(totalSumOfToppings);
-            }
+            totalSumOfToppings += parseInt(priceOfTopping[index]);
+        }
 
-            var num = 400;
-            var theNum = parseInt(num);
-            // console.log(theNum);
+        var num = 400;
+        var theNum = parseInt(num);
+        // console.log(theNum);
 
-            var grandTotal = (((showPriceNow + showPriceTwoNow + totalSumOfToppings) * nuumValue) + theNum);
+        var grandTotal = (((showPriceNow + showPriceTwoNow + totalSumOfToppings) * nuumValue) + theNum);
 
-            console.log(grandTotal);
+        console.log(grandTotal);
 
-            
 
-            alert("The Totals for your pizza(s) is Ksh. " + grandTotal );          
+
+        alert("The Totals for your pizza(s) is Ksh. " + grandTotal);
     })
 
 });
