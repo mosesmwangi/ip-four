@@ -39,7 +39,7 @@ $(document).ready(function () {
     });
 
     $("button#btn").click(function () {
-        alert("You will get your order on Checkout");
+        alert("You will get your order on clicking Checkout");
     })
 
     $("button#checkout").click(function () {
