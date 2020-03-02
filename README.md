@@ -26,4 +26,4 @@ SOFTWARE.
 ## Set Up
 To work on this project, kindly clone it from your Github
 # Contact
-## My e-mail is mosmwagat@gmai.com
+## My e-mail is mosmwagat@gmail.com
