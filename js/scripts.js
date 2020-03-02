@@ -79,7 +79,7 @@ $(document).ready(function() {
 
             
 
-            alert("The Totals for your pizza(s) is Ksh. " + grandTotal);          
+            alert("The Totals for your pizza(s) is Ksh. " + grandTotal );          
     })
 
 });
